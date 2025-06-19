@@ -1,7 +1,27 @@
 @import "tailwindcss";
 
 :root {
+  --dark-orange: #d87b48;
+  --normal-orange: #d87d4a;
+  --light-orange: #fbaf85;
+  --black: #191919;
+  --white: #ffffff;
+  --container-gray: #F1F1F1;
+  --font-gray: #8C8C8C;
+  --background: #FAFAFA;
 }
 
 @theme {
+  --color-dark-orange: var(--dark-orange);
+  --color-normal-orange: var(--normal-orange);
+  --color-light-orange: var(--light-orange);
+  --color-black: var(--black);
+  --color-white: var(--white);
+  --color-container-gray: var(--container-gray);
+  --color-font-gray: var(--font-gray);
+  --color-background: var(--background);
+}
+
+body {
+  background-color: var(--background);
 }
