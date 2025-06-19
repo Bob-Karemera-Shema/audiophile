@@ -11,6 +11,10 @@
   --background: #FAFAFA;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 @theme {
   --color-dark-orange: var(--dark-orange);
   --color-normal-orange: var(--normal-orange);
