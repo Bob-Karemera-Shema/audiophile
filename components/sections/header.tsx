@@ -4,7 +4,7 @@ import Navbar from "../shared/navbar";
 
 const Header = () => {
     return (
-        <header className="h-full bg-[url(/images/image-hero-small.jpeg)] lg:bg-[url(/images/image-hero.jpeg)] bg-center bg-overlay">
+        <header className="h-full bg-[url(/images/image-hero-small.jpeg)] lg:bg-[url(/images/image-hero.jpeg)] bg-center bg-hero-overlay">
             <NavbarContextProvider>
                 <Navbar />
             </NavbarContextProvider>

@@ -3,6 +3,7 @@ import { Manrope } from "next/font/google";
 import Header from "@/components/sections/header";
 import "./globals.css";
 import Footer from "@/components/shared/footer";
+import Categories from "@/components/shared/categories";
 
 const manrope = Manrope({
   subsets: ['latin']
@@ -26,6 +27,7 @@ export default function RootLayout({
         <Header />
         <main className="max-w-5xl my-0 mx-6 lg:mx-auto">
           {children}
+          <Categories variant="section" />
         </main>
         <Footer />
       </body>

@@ -22,7 +22,8 @@
   --color-font-gray: var(--font-gray);
   --color-hover-gray: var(--hover-gray);
   --color-background: var(--background);
-  --color-overlay: rgba(0, 0, 0, 0.2);
+  --color-hero-overlay: rgba(0, 0, 0, 0.2);
+  --color-sidebar-overlay: rgba(0, 0, 0, 0.6);
 }
 
 body {
