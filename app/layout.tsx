@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
-import NavigationWrapper from "@/components/shared/navigationWrapper";
+import Header from "@/components/sections/header";
 import "./globals.css";
 
 const manrope = Manrope({
@@ -22,9 +22,7 @@ export default function RootLayout({
       <body
         className={`${manrope.className} antialiased`}
       >
-        <header className="bg-black">
-          <NavigationWrapper />
-        </header>
+        <Header />
         {children}
       </body>
     </html>

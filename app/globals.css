@@ -8,11 +8,8 @@
   --white: #ffffff;
   --container-gray: #F1F1F1;
   --font-gray: #8C8C8C;
+  --hover-gray: #4c4c4c;
   --background: #FAFAFA;
-}
-
-* {
-  box-sizing: border-box;
 }
 
 @theme {
@@ -23,9 +20,42 @@
   --color-white: var(--white);
   --color-container-gray: var(--container-gray);
   --color-font-gray: var(--font-gray);
+  --color-hover-gray: var(--hover-gray);
   --color-background: var(--background);
+  --color-overlay: rgba(0, 0, 0, 0.2);
 }
 
 body {
   background-color: var(--background);
+}
+
+@layer components {
+  .btn-primary {
+    background-color: var(--color-normal-orange);
+    color: var(--color-white);
+
+    &:hover {
+      background-color: var(--color-light-orange);
+    }
+  }
+
+  .btn-secondary {
+    background-color: var(--color-black);
+    color: var(--color-white);
+
+    &:hover {
+      background-color: var(--color-hover-gray);
+    }
+  }
+
+  .btn-outline {
+    background-color: transparent;
+    color: var(--color-black);
+    border: 1px solid var(--color-black);
+
+    &:hover {
+      background-color: var(--color-black);
+      color: var(--color-white);
+    }
+  }
 }

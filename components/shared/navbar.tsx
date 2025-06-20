@@ -34,7 +34,7 @@ const Navbar = () => {
     const { isOpen, toggleIsOpen } = useContext(NavbarContext);
 
     return (
-        <nav className="text-white max-w-6xl my-0 mx-auto py-8 px-4 border-b-1 border-container-gray flex justify-between items-center sm:gap-8 lg:gap-0">
+        <nav className="max-w-5xl my-0 mx-6 lg:mx-auto py-8 text-white border-b-1 border-hover-gray flex justify-between items-center sm:gap-8 lg:gap-0">
             <button className="w-8 h-8 cursor-pointer lg:hidden" onClick={toggleIsOpen}>
                 {
                     isOpen ? (<IoClose className="w-full h-full" />) : <IoMdMenu className="w-full h-full" />
