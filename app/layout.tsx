@@ -4,6 +4,7 @@ import Header from "@/components/sections/header";
 import "./globals.css";
 import Footer from "@/components/shared/footer";
 import Categories from "@/components/shared/categories";
+import About from "@/components/sections/about";
 
 const manrope = Manrope({
   subsets: ['latin']
@@ -28,6 +29,7 @@ export default function RootLayout({
         <main className="max-w-5xl my-0 mx-6 lg:mx-auto">
           {children}
           <Categories variant="section" />
+          <About />
         </main>
         <Footer />
       </body>
