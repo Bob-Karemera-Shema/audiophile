@@ -4,30 +4,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import clsx from "clsx";
+import { useContext } from "react";
 import { IoCartOutline } from "react-icons/io5";
+import { NavbarContext } from "@/utils/context/NavbarContext";
+import navLinks from "@/utils/navData";
 import { IoMdMenu } from "react-icons/io";
 import { IoClose } from "react-icons/io5";
-import { useContext } from "react";
-import { NavbarContext } from "@/utils/context/NavbarContext";
-
-const navLinks = [
-    {
-        label: 'Home',
-        path: '/'
-    },
-    {
-        label: 'Headphones',
-        path: '/headphones'
-    },
-    {
-        label: 'Speakers',
-        path: '/speakers'
-    },
-    {
-        label: 'Earphones',
-        path: '/earphones'
-    }
-];
 
 const Navbar = () => {
     const pathname = usePathname();

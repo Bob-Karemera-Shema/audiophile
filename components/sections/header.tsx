@@ -1,5 +1,5 @@
 import { NavbarContextProvider } from "@/utils/context/NavbarContext";
-import Hero from "./hero"
+import Hero from "../shared/hero"
 import Navbar from "../shared/navbar";
 
 const Header = () => {
