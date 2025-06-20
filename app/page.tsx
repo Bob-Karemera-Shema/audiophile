@@ -1,10 +1,9 @@
-import Navbar from "@/components/shared/navbar";
-import Image from "next/image";
+import Categories from "@/components/shared/categories";
 
 export default function Home() {
   return (
     <main>
-      <div>Hello</div>
+      <Categories />
     </main>
   );
 }

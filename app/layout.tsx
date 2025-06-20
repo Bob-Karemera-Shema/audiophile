@@ -24,7 +24,9 @@ export default function RootLayout({
         className={`${manrope.className} antialiased`}
       >
         <Header />
-        {children}
+        <main className="max-w-5xl my-0 mx-6 lg:mx-auto">
+          {children}
+        </main>
         <Footer />
       </body>
     </html>
