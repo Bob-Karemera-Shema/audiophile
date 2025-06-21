@@ -2,8 +2,8 @@ import Image from "next/image";
 
 const About = () => {
     return (
-        <section className="grid grid-cols-1 lg:grid-cols-2 gap-12 my-24">
-            <article className="order-2 lg:order-1 flex flex-col gap-12 items-center lg:items-start text-center lg:text-left sm:px-4 lg:px-0">
+        <section className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 my-24">
+            <article className="order-2 lg:order-1 flex flex-col gap-12 items-center lg:justify-center text-center lg:text-left sm:px-4 lg:px-0">
                 <h2 className="font-bold text-3xl sm:text-[2.5rem] uppercase">
                     Bringing you the
                     <span className="text-dark-orange"> best </span>

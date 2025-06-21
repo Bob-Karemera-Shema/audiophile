@@ -19,7 +19,8 @@ const Button: FC<ButtonProps> = ({
                 'font-bold text-[13px] uppercase py-3.5 px-8 tracking-wider',
                 {
                     'btn-primary': variant === 'primary',
-                    'btn-secondary': variant === 'secondary'
+                    'btn-secondary': variant === 'secondary',
+                    'btn-outline': variant === 'outline'
                 },
                 className
             )}

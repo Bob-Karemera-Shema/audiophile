@@ -28,7 +28,6 @@ export default function RootLayout({
         <Header />
         <main className="max-w-5xl my-0 mx-6 lg:mx-auto">
           {children}
-          <Categories variant="section" />
           <About />
         </main>
         <Footer />
