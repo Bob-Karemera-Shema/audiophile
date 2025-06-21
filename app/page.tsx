@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main>
+    <>
       <Categories variant="section" />
 
       <section className="bg-dark-orange rounded-md grid grid-cols-1 relative h-[700px] lg:h-[600px] overflow-hidden mb-12">
@@ -67,6 +67,6 @@ export default function Home() {
           </Link>
         </div>
       </section>
-    </main>
+    </>
   );
 }
