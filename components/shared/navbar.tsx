@@ -4,9 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import clsx from "clsx";
-import { useContext, useEffect } from "react";
+import { useEffect, useState } from "react";
 import { IoCartOutline } from "react-icons/io5";
-import { NavbarContext } from "@/utils/context/NavbarContext";
 import navLinks from "@/utils/navData";
 import { IoMdMenu } from "react-icons/io";
 import { IoClose } from "react-icons/io5";
@@ -14,7 +13,9 @@ import Categories from "./categories";
 
 const Navbar = () => {
     const pathname = usePathname();
-    const { isOpen, toggleIsOpen } = useContext(NavbarContext);
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggle = () => setIsOpen(!isOpen);
 
     useEffect(() => {
         if (isOpen) {
@@ -30,13 +31,13 @@ const Navbar = () => {
         <>
             <nav className="max-w-5xl my-0 lg:mx-auto">
                 <div className="relative z-10 px-6 lg:px-0 py-8 text-white border-b-1 border-hover-gray flex justify-between items-center sm:gap-8 lg:gap-0">
-                    <button className="w-8 h-8 cursor-pointer lg:hidden" onClick={toggleIsOpen}>
+                    <button className="w-8 h-8 cursor-pointer lg:hidden" onClick={toggle}>
                         {
                             isOpen ? (<IoClose className="w-full h-full" />) : <IoMdMenu className="w-full h-full" />
                         }
                     </button>
                     <Link href="/" aria-label="Home Page" className="sm:flex-2 lg:flex-none">
-                        <Image src="/images/image.svg" alt="Audiophile logo" width={144} height={25} />
+                        <Image src="/images/main/image.svg" alt="Audiophile logo" width={144} height={25} />
                     </Link>
                     <ul className="hidden lg:flex gap-8">
                         {

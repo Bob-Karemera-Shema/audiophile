@@ -1,4 +1,4 @@
-import Image from "next/image";
+import CustomImage from "../shared/image";
 
 const About = () => {
     return (
@@ -14,11 +14,11 @@ const About = () => {
                 </p>
             </article>
             <article className="order-1 lg:order-2">
-                <picture>
-                    <source media="(min-width:1024px)" srcSet="/images/image-best-gear-lg.jpeg" />
-                    <source media="(min-width:468px)" srcSet="/images/image-best-gear-sm.jpeg" />
-                    <img src="/images/image-best-gear.jpeg" alt="Flowers" className="rounded-md" />
-                </picture>
+                <CustomImage
+                    source="/images/main/image-best-gear.jpeg"
+                    smSource="/images/main/image-best-gear-sm.jpeg"
+                    lgSource="/images/main/image-best-gear-lg.jpeg"
+                />
             </article>
         </section>
     )

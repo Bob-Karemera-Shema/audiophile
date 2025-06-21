@@ -1,5 +1,6 @@
 import Button from "@/components/shared/button";
 import Categories from "@/components/shared/categories";
+import CustomImage from "@/components/shared/image";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -10,11 +11,11 @@ export default function Home() {
 
       <section className="bg-dark-orange rounded-md grid grid-cols-1 relative h-[700px] lg:h-[600px] overflow-hidden mb-12">
         <div className="relative -top-36 sm:-top-60 lg:-top-20 lg:-left-56">
-          <Image src="/images/pattern-circles.svg" alt="Circle patterns" width={944} height={944} className="w-full h-full object-cover" />
+          <Image src="/images/main/pattern-circles.svg" alt="Circle patterns" width={944} height={944} className="w-full h-full object-cover" />
         </div>
         <div className="absolute top-1/2 left-1/2 -translate-1/2 flex flex-col items-center lg:flex-row lg:justify-between">
           <Image
-            src="/images/image-speaker-zx9_2.png"
+            src="/images/main/image-speaker-zx9_2.png"
             alt="Speaker"
             width={756}
             height={918}
@@ -34,11 +35,12 @@ export default function Home() {
 
       <section className="rounded-md overflow-hidden relative mb-12">
         <div>
-          <picture>
-            <source media="(min-width:1024px)" srcSet="/images/image-speaker-zx7-lg.jpeg" />
-            <source media="(min-width:468px)" srcSet="/images/image-speaker-zx7-sm.jpeg" />
-            <img src="/images/image-speaker-zx7.jpeg" alt="Speaker" />
-          </picture>
+          <CustomImage
+            source="/images/main/image-speaker-zx7.jpeg"
+            smSource="/images/main/image-speaker-zx7-sm.jpeg"
+            lgSource="/images/main/image-speaker-zx7-lg.jpeg"
+            alt="ZX7 Speaker"
+          />
         </div>
         <div className="absolute top-1/2 -translate-y-1/2 left-6 sm:left-14 lg:left-20">
           <h2 className="font-bold uppercase text-[1.75rem] mb-8">ZX7 Speaker</h2>
@@ -52,11 +54,12 @@ export default function Home() {
 
       <section className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-3 lg:gap-8">
         <div className="rounded-md overflow-hidden">
-          <picture>
-            <source media="(min-width:1024px)" srcSet="/images/image-earphones-yx1-lg.jpeg" />
-            <source media="(min-width:468px)" srcSet="/images/image-earphones-yx1-sm.jpeg" />
-            <img src="/images/image-earphones-yx1.jpeg" alt="Speaker" />
-          </picture>
+          <CustomImage
+            source="/images/main/image-earphones-yx1.jpeg"
+            smSource="/images/main/image-earphones-yx1-sm.jpeg"
+            lgSource="/images/main/image-earphones-yx1-lg.jpeg"
+            alt="YX1 Earphones"
+          />
         </div>
         <div className="bg-container-gray rounded-md h-full py-10 pl-6 flex flex-col justify-center lg:pl-24">
           <h2 className="font-bold uppercase text-[1.75rem] mb-8">YX1 Earphones</h2>
