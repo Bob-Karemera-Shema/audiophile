@@ -37,7 +37,7 @@ const Navbar = () => {
                         }
                     </button>
                     <Link href="/" aria-label="Home Page" className="sm:flex-2 lg:flex-none">
-                        <Image src="/images/main/image.svg" alt="Audiophile logo" width={144} height={25} />
+                        <Image src="/images/main/image.svg" alt="Audiophile logo" width={144} height={25} priority />
                     </Link>
                     <ul className="hidden lg:flex gap-8">
                         {

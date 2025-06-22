@@ -1,3 +1,4 @@
+import About from "@/components/sections/about";
 import ProductIntro from "@/components/sections/productIntro";
 import BackButton from "@/components/shared/backButton";
 import Button from "@/components/shared/button";
@@ -5,7 +6,6 @@ import Categories from "@/components/shared/categories";
 import CustomImage from "@/components/shared/image";
 import { productsData } from "@/utils/productData";
 import Link from "next/link";
-import { Fragment } from "react";
 
 export default async function Product({
   params,
@@ -108,6 +108,7 @@ export default async function Product({
       </section>
 
       <Categories variant="section" />
+      <About />
     </>
   )
 }

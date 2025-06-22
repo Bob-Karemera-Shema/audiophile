@@ -11,15 +11,18 @@ const Header = () => {
     const pathSegments = pathname.split('/').filter(Boolean);
 
     const isProductPage = pathSegments.length === 2;
+    const isCheckout = pathname.startsWith('/checkout');
     const isHome = pathname === '/';
+
+    console.log(!isProductPage && !isCheckout);
 
     return (
         <header
-            className={`relative ${(isHome || isProductPage) ? 'h-full' : 'h-[25vh] sm:h-[35vh] lg:h-[45vh]'} ${isHome ? 'bg-[url(/images/main/image-hero-small.jpeg)]' : 'bg-black'}
+            className={`relative ${(isHome || isProductPage || isCheckout) ? 'h-full' : 'h-[25vh] sm:h-[35vh] lg:h-[45vh]'} ${isHome ? 'bg-[url(/images/main/image-hero-small.jpeg)]' : 'bg-black'}
                         ${isHome ? 'lg:bg-[url(/images/main/image-hero.jpeg)]' : 'bg-black'} bg-center ${isHome && 'bg-hero-overlay'}`}
         >
             <Navbar />
-            {!isProductPage && <Hero />}
+            {(!isProductPage && !isCheckout) && <Hero />}
         </header>
     )
 }

@@ -1,16 +1,9 @@
+import About from "@/components/sections/about";
 import Button from "@/components/shared/button";
 import Categories from "@/components/shared/categories";
 import CustomImage from "@/components/shared/image";
 import { productsData } from "@/utils/productData";
 import Link from "next/link";
-
-// export async function generateStaticParams() {
-//   const slugs = Object.keys(productsData.products)
- 
-//   return slugs.map((slug) => ({
-//     slug
-//   }))
-// }
 
 export default async function Catalog({
   params,
@@ -51,7 +44,9 @@ export default async function Catalog({
           ))
         }
       </section>
+
       <Categories variant="section" />
+      <About />
     </>
   )
 }
