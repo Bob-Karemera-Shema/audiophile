@@ -2,8 +2,15 @@ import Button from "@/components/shared/button";
 import Categories from "@/components/shared/categories";
 import CustomImage from "@/components/shared/image";
 import { productsData } from "@/utils/productData";
-import Image from "next/image";
 import Link from "next/link";
+
+// export async function generateStaticParams() {
+//   const slugs = Object.keys(productsData.products)
+ 
+//   return slugs.map((slug) => ({
+//     slug
+//   }))
+// }
 
 export default async function Catalog({
   params,
@@ -11,7 +18,7 @@ export default async function Catalog({
   params: Promise<{ catalog: string }>
 }) {
   const { catalog } = await params;
-  const products = productsData.products[catalog];
+  const products = productsData[catalog];
 
   return (
     <>
@@ -24,9 +31,9 @@ export default async function Catalog({
             >
               <div className={`rounded-md overflow-hidden ${index % 2 !== 0 ? 'lg:order-2' : ''}`}>
                 <CustomImage
-                  source={product.image.mobile}
-                  smSource={product.image.tablet}
-                  lgSource={product.image.desktop}
+                  source={product.categoryImage.mobile}
+                  smSource={product.categoryImage.tablet}
+                  lgSource={product.categoryImage.desktop}
                   alt={product.name}
                 />
               </div>

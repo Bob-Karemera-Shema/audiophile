@@ -7,6 +7,7 @@
   --black: #191919;
   --white: #ffffff;
   --container-gray: #F1F1F1;
+  --button-gray: #D3D3D3;
   --font-gray: #8C8C8C;
   --hover-gray: #4c4c4c;
   --background: #FAFAFA;
@@ -19,6 +20,7 @@
   --color-black: var(--black);
   --color-white: var(--white);
   --color-container-gray: var(--container-gray);
+  --color-button-gray: var(--button-gray);
   --color-font-gray: var(--font-gray);
   --color-hover-gray: var(--hover-gray);
   --color-background: var(--background);

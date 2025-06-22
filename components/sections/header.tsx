@@ -7,13 +7,19 @@ import { usePathname } from "next/navigation";
 const Header = () => {
     const pathname = usePathname();
 
+    // Split the path into segments & removes empty strings
+    const pathSegments = pathname.split('/').filter(Boolean);
+
+    const isProductPage = pathSegments.length === 2;
+    const isHome = pathname === '/';
+
     return (
         <header
-            className={`relative ${pathname === '/' ? 'h-full' : 'h-[25vh] sm:h-[35vh] lg:h-[45vh]'} ${pathname === '/' ? 'bg-[url(/images/main/image-hero-small.jpeg)]' : 'bg-black'}
-                        ${pathname === '/' ? 'lg:bg-[url(/images/main/image-hero.jpeg)]' : 'bg-black'} bg-center ${pathname === '/' && 'bg-hero-overlay'}`}
+            className={`relative ${(isHome || isProductPage) ? 'h-full' : 'h-[25vh] sm:h-[35vh] lg:h-[45vh]'} ${isHome ? 'bg-[url(/images/main/image-hero-small.jpeg)]' : 'bg-black'}
+                        ${isHome ? 'lg:bg-[url(/images/main/image-hero.jpeg)]' : 'bg-black'} bg-center ${isHome && 'bg-hero-overlay'}`}
         >
             <Navbar />
-            <Hero />
+            {!isProductPage && <Hero />}
         </header>
     )
 }

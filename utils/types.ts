@@ -51,6 +51,4 @@ export interface IProduct {
         }[]
 }
 
-export interface IProductData {
-    "products": Record<string, IProduct[]>
-}
+export type IProductData = Record<string, IProduct[]>;
