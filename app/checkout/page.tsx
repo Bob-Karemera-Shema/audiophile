@@ -54,7 +54,7 @@ export default function Checkout() {
 
     const paymentMethod = watch("paymentMethod");
 
-    const onSubmit = (data: FormData) => {
+    const onSubmit = () => {
         setIsModalOpen(true);
     }
 

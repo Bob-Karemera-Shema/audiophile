@@ -31,7 +31,7 @@ const Footer = () => {
                 </div>
                 <div className="w-full flex flex-col gap-1 sm:flex-row sm:items-end lg:justify-between">
                     <div className="flex flex-col gap-12 text-center sm:text-left text-font-gray lg:max-w-1/2">
-                        <p>Audiophile is an all in one stop to fulfill your audio needs. We're a small team of music lovers and sound specialists who are devoted to helping you get the most out of personal audio. Come and visit our demo facility - we’re open 7 days a week.</p>
+                        <p>{"Audiophile is an all in one stop to fulfill your audio needs. We're a small team of music lovers and sound specialists who are devoted to helping you get the most out of personal audio. Come and visit our demo facility - we’re open 7 days a week."}</p>
                         <p>{`Copyright ${new Date().getFullYear()}. All Rights Reserved`}</p>
                     </div>
                     <div className="flex justify-center text-white gap-4 lg:max-w- lg:self-center">
