@@ -2,7 +2,7 @@ import clsx from "clsx";
 
 const RadioInput = ({ id, label, selected }: { id: string; label: string; selected: string }) => {
     return (
-        <label className="flex items-center gap-3 cursor-pointer p-4 border rounded-lg outline-dark-orange transition">
+        <label className="flex items-center gap-3 cursor-pointer p-4 border border-font-gray rounded-lg outline-dark-orange transition">
             <input
                 type="radio"
                 id={`radio-${id}`}
@@ -25,7 +25,7 @@ const RadioInput = ({ id, label, selected }: { id: string; label: string; select
                         <div className="w-2.5 h-2.5 bg-dark-orange rounded-full" />
                     )}
             </div>
-            <span>
+            <span className="text-sm font-black">
                 {label}
             </span>
         </label>
