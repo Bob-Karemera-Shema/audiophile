@@ -1,3 +1,4 @@
+import About from "@/components/sections/about";
 import Button from "@/components/shared/button";
 import Categories from "@/components/shared/categories";
 import CustomImage from "@/components/shared/image";
@@ -70,6 +71,8 @@ export default function Home() {
           </Link>
         </div>
       </section>
+
+      <About />
     </>
   );
 }

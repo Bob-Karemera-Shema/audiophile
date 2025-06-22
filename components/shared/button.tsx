@@ -16,7 +16,7 @@ const Button: FC<ButtonProps> = ({
         <button
             type={type}
             className={clsx(
-                'font-bold text-[13px] uppercase py-3.5 px-8 tracking-wider',
+                'font-bold text-[13px] uppercase py-3.5 px-8 tracking-wider cursor-pointer',
                 {
                     'btn-primary': variant === 'primary',
                     'btn-secondary': variant === 'secondary',

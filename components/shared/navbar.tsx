@@ -10,22 +10,29 @@ import navLinks from "@/utils/navData";
 import { IoMdMenu } from "react-icons/io";
 import { IoClose } from "react-icons/io5";
 import Categories from "./categories";
+import { useAppDispatch, useAppSelector } from "@/utils/store/hooks";
+import { toggleIsCartOpen } from "@/utils/store/cartSlice";
+import Cart from "./cart";
 
 const Navbar = () => {
     const pathname = usePathname();
+    const dispatch = useAppDispatch();
+    const isCartOpen = useAppSelector(state => state.cart.isCartOpen);
     const [isOpen, setIsOpen] = useState(false);
 
     const toggle = () => setIsOpen(!isOpen);
 
+    const toggleCart = () => dispatch(toggleIsCartOpen());
+
     useEffect(() => {
-        if (isOpen) {
+        if (isOpen || isCartOpen) {
             document.body.classList.add("overflow-hidden");
         } else {
             document.body.classList.remove("overflow-hidden");
         }
         // Clean up in case the component unmounts
         return () => document.body.classList.remove("overflow-hidden");
-    }, [isOpen]);
+    }, [isOpen, isCartOpen]);
 
     return (
         <>
@@ -62,10 +69,14 @@ const Navbar = () => {
                     <button
                         type="button"
                         className="cursor-pointer"
+                        onClick={toggleCart}
                     >
-                        <IoCartOutline className="w-6 h-6" />
+                        {
+                            isCartOpen ? <IoClose className="w-6 h-6" /> : <IoCartOutline className="w-6 h-6" />
+                        }
                     </button>
                 </div>
+                
                 {/* sidebar */}
                 <div
                     className={clsx(
@@ -80,8 +91,10 @@ const Navbar = () => {
                         <Categories variant="sidebar" />
                     </div>
                 </div>
-            </nav>
 
+                {/* Cart Dropdown */}
+                { isCartOpen && <Cart /> }
+            </nav>
         </>
     )
 };

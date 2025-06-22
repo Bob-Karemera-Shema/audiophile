@@ -92,13 +92,13 @@ export default function Checkout() {
                                 <RadioInput
                                     id="1"
                                     label="e-Money"
-                                    selected="e-Money"
+                                    selected=""
                                 />
 
                                 <RadioInput
                                     id="2"
                                     label="Cash on Delivery"
-                                    selected="e-Money"
+                                    selected=""
                                 />
                             </div>
                         </div>

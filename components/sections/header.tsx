@@ -14,8 +14,6 @@ const Header = () => {
     const isCheckout = pathname.startsWith('/checkout');
     const isHome = pathname === '/';
 
-    console.log(!isProductPage && !isCheckout);
-
     return (
         <header
             className={`relative ${(isHome || isProductPage || isCheckout) ? 'h-full' : 'h-[25vh] sm:h-[35vh] lg:h-[45vh]'} ${isHome ? 'bg-[url(/images/main/image-hero-small.jpeg)]' : 'bg-black'}

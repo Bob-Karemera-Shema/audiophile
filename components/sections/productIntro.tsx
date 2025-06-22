@@ -4,13 +4,18 @@ import { IProduct } from "@/utils/types";
 import CustomImage from "../shared/image";
 import Button from "../shared/button";
 import { useState } from "react";
+import { addItemToCart } from "@/utils/store/cartSlice";
+import { useAppDispatch } from "@/utils/store/hooks";
 
 const ProductIntro = ({ product }: { product: IProduct }) => {
-    const [count, setCount] = useState(1);
+    const dispatch = useAppDispatch();
+    const [quantity, setQuantity] = useState(1);
 
-    const decrement = () => setCount(count === 1 ? 1 : count - 1);
+    const decrement = () => setQuantity(quantity === 1 ? 1 : quantity - 1);
 
-    const increment = () => setCount(count + 1);
+    const increment = () => setQuantity(quantity + 1);
+
+    const addProductToCart = () => dispatch(addItemToCart({product, quantity}))
 
     return (
         <>
@@ -38,13 +43,13 @@ const ProductIntro = ({ product }: { product: IProduct }) => {
                                     onClick={decrement}
                                     className="h-full px-5 cursor-pointer border-none font-medium text-font-gray hover:text-dark-orange hover:bg-button-gray"
                                     >-</button>
-                                    <span className="w-4 flex justify-center">{count}</span>
+                                    <span className="w-4 flex justify-center">{quantity}</span>
                                     <button
                                     onClick={increment}
                                     className="h-full px-5 cursor-pointer border-none font-medium text-font-gray hover:text-dark-orange hover:bg-button-gray"
                                     >+</button>
                                 </div>
-                                <Button>
+                                <Button onClick={addProductToCart}>
                                     Add To Cart
                                 </Button>
                             </div>

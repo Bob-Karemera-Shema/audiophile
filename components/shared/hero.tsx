@@ -1,6 +1,7 @@
 import { usePathname } from "next/navigation";
 import Button from "../shared/button";
 import navLinks from "@/utils/navData";
+import Link from "next/link";
 
 const Hero = () => {
     const pathname = usePathname();
@@ -19,7 +20,9 @@ const Hero = () => {
                             <p className="text-font-gray uppercase mb-4 tracking-[0.625rem] text-sm font-bold">New Product</p>
                             <h1 className="text-white text-5xl/tight font-bold tracking-wider mb-6 uppercase">XX99 Mark II Headphones</h1>
                             <p className="text-font-gray text-[15px] mb-10 max-w-xs">Experience natural, lifelike audio and exceptional build quality made for the passionate music enthusiast.</p>
-                            <Button>See Product</Button>
+                            <Link href='/headphones/xx99-mark-two-headphones'>
+                                <Button>See Product</Button>
+                            </Link>
                         </div>
                     </article>
                 ) : (

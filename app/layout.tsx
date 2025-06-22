@@ -3,9 +3,11 @@ import { Manrope } from "next/font/google";
 import Header from "@/components/sections/header";
 import Footer from "@/components/shared/footer";
 import "./globals.css";
+import StoreProvider from "@/utils/store/storeProvider";
 
 const manrope = Manrope({
-  subsets: ['latin']
+  subsets: ['latin'],
+  display: 'swap'
 });
 
 export const metadata: Metadata = {
@@ -23,11 +25,13 @@ export default function RootLayout({
       <body
         className={`${manrope.className} antialiased`}
       >
-        <Header />
-        <main className="max-w-6xl my-0 mx-6 lg:mx-auto">
-          {children}
-        </main>
-        <Footer />
+        <StoreProvider>
+            <Header />
+            <main className="max-w-6xl my-0 mx-6 lg:mx-auto">
+              {children}
+            </main>
+            <Footer />
+        </StoreProvider>
       </body>
     </html>
   );

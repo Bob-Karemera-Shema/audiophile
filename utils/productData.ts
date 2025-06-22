@@ -12,7 +12,7 @@ export const productsData: IProductData = {
         "tablet": "/images/earphones/image-yx1-earphones.jpeg",
         "desktop": "/images/earphones/image-yx1-earphones-lg.jpeg"
       },
-      "cartImage": "/images/cart/image-yx1-earphones.jpg",
+      "cartImage": "/images/earphones/image-yx1-earphones.jpeg",
       "category": "earphones",
       "categoryImage": {
         "mobile": "/images/earphones/image-yx1-earphones.jpeg",
@@ -104,7 +104,7 @@ export const productsData: IProductData = {
         "tablet": "/images/headphones/image-xx99-mark-one.jpeg",
         "desktop": "/images/headphones/image-xx99-mark-one-lg.jpeg"
       },
-      "cartImage": "/images/cart/image-xx99-mark-one-headphones.jpg",
+      "cartImage": "/images/headphones/image-xx99-mark-one.jpeg",
       "category": "headphones",
       "categoryImage": {
         "mobile": "/images/headphones/image-xx99-mark-one.jpeg",
@@ -190,7 +190,7 @@ export const productsData: IProductData = {
         "tablet": "/images/headphones/image-xx59.jpeg",
         "desktop": "/images/headphones/image-xx59-lg.jpeg"
       },
-      "cartImage": "/images/cart/image-xx59-headphones.jpg",
+      "cartImage": "/images/headphones/image-xx59.jpeg",
       "category": "headphones",
       "categoryImage": {
         "mobile": "/images/headphones/image-xx59.jpeg",
@@ -276,7 +276,7 @@ export const productsData: IProductData = {
         "tablet": "/images/headphones/image-xx99-mark-two.jpeg",
         "desktop": "/images/headphones/image-xx99-mark-two-lg.jpeg"
       },
-      "cartImage": "/images/cart/image-xx99-mark-two-headphones.jpg",
+      "cartImage": "/images/headphones/image-xx99-mark-two.jpeg",
       "category": "headphones",
       "categoryImage": {
         "mobile": "/images/headphones/image-xx99-mark-two.jpeg",
@@ -368,7 +368,7 @@ export const productsData: IProductData = {
         "tablet": "/images/speakers/image-zx7.jpeg",
         "desktop": "/images/speakers/image-zx7-lg.jpeg"
       },
-      "cartImage": "/images/cart/image-zx7-speaker.jpg",
+      "cartImage": "/images/speakers/image-zx7.jpeg",
       "category": "speakers",
       "categoryImage": {
         "mobile": "/images/speakers/image-zx7.jpeg",
@@ -458,7 +458,7 @@ export const productsData: IProductData = {
         "tablet": "/images/speakers/image-zx9.jpeg",
         "desktop": "/images/speakers/image-zx9-lg.jpeg"
       },
-      "cartImage": "/images/cart/image-zx9-speaker.jpg",
+      "cartImage": "/images/speakers/image-zx9.jpeg",
       "category": "speakers",
       "categoryImage": {
         "mobile": "/images/speakers/image-zx9.jpeg",

@@ -52,3 +52,12 @@ export interface IProduct {
 }
 
 export type IProductData = Record<string, IProduct[]>;
+
+export interface ICartItem extends IProduct {
+    quantity: number;
+}
+
+export interface ICartState {
+    isCartOpen: boolean;
+    cartItems: ICartItem[];
+}

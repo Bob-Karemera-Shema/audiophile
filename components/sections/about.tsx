@@ -18,6 +18,7 @@ const About = () => {
                     source="/images/main/image-best-gear.jpeg"
                     smSource="/images/main/image-best-gear-sm.jpeg"
                     lgSource="/images/main/image-best-gear-lg.jpeg"
+                    rounded
                 />
             </article>
         </section>
