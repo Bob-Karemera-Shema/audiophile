@@ -285,7 +285,7 @@ export default function Checkout() {
             {
                 isModalOpen && (
                     <div className="bg-hero-overlay w-full h-full fixed top-0 left-0 z-50">
-                        <dialog className="p-8 bg-white absolute top-1/2 left-1/2 -translate-1/2 z-50 flex flex-col gap-6 rounded-lg" open={isModalOpen}>
+                        <dialog className="w-full sm:w-fit p-8 bg-white absolute top-1/2 left-1/2 -translate-1/2 z-50 flex flex-col gap-6 rounded-lg" open={isModalOpen}>
                             <div className="w-16 h-16 flex justify-center items-center bg-dark-orange rounded-[50%] text-white">
                                 <FaCheck className="text-2xl" />
                             </div>
